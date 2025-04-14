@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unit 1 Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 40px;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 25px;
+      padding: 15px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .question h3 {
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .result {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Unit 1 Quiz</h1>
+
+  <form id="quizForm">
+    <div class="question">
+      <h3>1. What is the monomer of a protein?</h3>
+      <label><input type="radio" name="q1" value="a"> Monosaccharide</label>
+      <label><input type="radio" name="q1" value="b"> Nucleotide</label>
+      <label><input type="radio" name="q1" value="c"> Amino acid</label>
+      <label><input type="radio" name="q1" value="d"> Fatty acid</label>
+    </div>
+
+    <div class="question">
+      <h3>2. Which macromolecule stores genetic information?</h3>
+      <label><input type="radio" name="q2" value="a"> Protein</label>
+      <label><input type="radio" name="q2" value="b"> Lipid</label>
+      <label><input type="radio" name="q2" value="c"> Nucleic acid</label>
+      <label><input type="radio" name="q2" value="d"> Carbohydrate</label>
+    </div>
+
+    <div class="question">
+      <h3>3. What bond forms between amino acids?</h3>
+      <label><input type="radio" name="q3" value="a"> Glycosidic bond</label>
+      <label><input type="radio" name="q3" value="b"> Peptide bond</label>
+      <label><input type="radio" name="q3" value="c"> Hydrogen bond</label>
+      <label><input type="radio" name="q3" value="d"> Ionic bond</label>
+    </div>
+
+    <button type="button" onclick="checkAnswers()">Submit</button>
+    <div class="result" id="result"></div>
+  </form>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "c",
+        q2: "c",
+        q3: "b"
+      };
+
+      let score = 0;
+      const total = Object.keys(answers).length;
+
+      for (let q in answers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === answers[q]) {
+          score++;
+        }
+      }
+
+      const resultText = `You got ${score} out of ${total} correct!`;
+      document.getElementById("result").innerText = resultText;
+    }
+  </script>
+
+</body>
+</html>
