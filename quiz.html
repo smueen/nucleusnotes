@@ -1,113 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unit 1 Quiz - Nucleus Notes</title>
-
-  <!-- Google Fonts -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 1 Quiz</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@900&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #e0f2ff;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen p-6 text-gray-800">
-
-  <!-- Header -->
-  <header class="text-center mb-6">
-    <h1 class="text-5xl text-purple-800">Nucleus Notes 🧬</h1>
-    <h2 class="text-2xl mt-2 text-gray-700">Unit 1: Chemistry of Life</h2>
+<body>
+  <header>
+    <h1>📝 Unit 1 Quiz</h1>
   </header>
 
-  <!-- Resource Buttons -->
-  <div class="flex flex-wrap justify-center gap-4 mb-10">
-    <a href="unit1-notes.pdf" download class="bg-purple-600 hover:bg-purple-700 text-white px-5 py-3 rounded-xl text-md font-semibold transition">
-      📄 Download Notes (PDF)
-    </a>
-    <a href="https://quizlet.com/ae/1031194563/ap-biology-unit-1-chemistry-of-life-flash-cards/?i=33z4uj&x=1jqt" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-3 rounded-xl text-md font-semibold transition">
-      💡 Quizlet Practice
-    </a>
-    <a href="quiz1.html" class="bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-xl text-md font-semibold transition">
-      🧠 Take the Quiz
-    </a>
-  </div>
+  <main>
+    <form id="quiz-form">
+      <ol>
+        <li>
+          <p>What is the monomer of a carbohydrate?</p>
+          <label><input type="radio" name="q1" value="A"> A. Nucleotide</label><br>
+          <label><input type="radio" name="q1" value="B"> B. Amino acid</label><br>
+          <label><input type="radio" name="q1" value="C"> C. Monosaccharide</label><br>
+          <label><input type="radio" name="q1" value="D"> D. Fatty acid</label>
+        </li>
 
-  <!-- Quiz Form -->
-  <form id="quizForm" class="max-w-3xl mx-auto space-y-6 bg-white p-6 rounded-2xl shadow-lg">
-    
-    <!-- Questions 1-10 (unchanged from previous code, skipped here for brevity) -->
-    <!-- Copy your existing question blocks here -->
-    <!-- ↓↓↓ START OF QUESTION 1 ↓↓↓ -->
+        <li>
+          <p>Which element is found in proteins but not in carbohydrates?</p>
+          <label><input type="radio" name="q2" value="A"> A. Oxygen</label><br>
+          <label><input type="radio" name="q2" value="B"> B. Nitrogen</label><br>
+          <label><input type="radio" name="q2" value="C"> C. Hydrogen</label><br>
+          <label><input type="radio" name="q2" value="D"> D. Carbon</label>
+        </li>
 
-    <div>
-      <p class="font-semibold">1. What is the monomer of a carbohydrate?</p>
-      <label><input type="radio" name="q1" value="A"> Nucleotide</label><br>
-      <label><input type="radio" name="q1" value="B"> Amino acid</label><br>
-      <label><input type="radio" name="q1" value="C"> Monosaccharide</label><br>
-      <label><input type="radio" name="q1" value="D"> Fatty acid</label>
-    </div>
+        <li>
+          <p>Which macromolecule contains phosphorus in its structure?</p>
+          <label><input type="radio" name="q3" value="A"> A. Nucleic acids</label><br>
+          <label><input type="radio" name="q3" value="B"> B. Proteins</label><br>
+          <label><input type="radio" name="q3" value="C"> C. Carbohydrates</label><br>
+          <label><input type="radio" name="q3" value="D"> D. Steroids</label>
+        </li>
 
-    <!-- (Keep adding the other questions exactly as before...) -->
+        <li>
+          <p>What type of bond forms between amino acids in a protein?</p>
+          <label><input type="radio" name="q4" value="A"> A. Glycosidic</label><br>
+          <label><input type="radio" name="q4" value="B"> B. Hydrogen</label><br>
+          <label><input type="radio" name="q4" value="C"> C. Peptide</label><br>
+          <label><input type="radio" name="q4" value="D"> D. Phosphodiester</label>
+        </li>
 
-    <!-- Submit -->
-    <div class="text-center">
-      <button type="button" onclick="submitQuiz()" class="bg-purple-600 text-white px-6 py-3 rounded-xl text-lg font-bold hover:bg-purple-700 transition">
-        Submit Quiz
-      </button>
-    </div>
+        <li>
+          <p>Which nitrogen bases are purines?</p>
+          <label><input type="radio" name="q5" value="A"> A. Cytosine and Uracil</label><br>
+          <label><input type="radio" name="q5" value="B"> B. Adenine and Guanine</label><br>
+          <label><input type="radio" name="q5" value="C"> C. Thymine and Cytosine</label><br>
+          <label><input type="radio" name="q5" value="D"> D. Uracil and Thymine</label>
+        </li>
 
-    <!-- Results -->
-    <div id="result" class="mt-6 text-lg text-center font-semibold"></div>
-  </form>
+        <li>
+          <p>Which of the following is a disaccharide?</p>
+          <label><input type="radio" name="q6" value="A"> A. Glucose</label><br>
+          <label><input type="radio" name="q6" value="B"> B. Lactose</label><br>
+          <label><input type="radio" name="q6" value="C"> C. Galactose</label><br>
+          <label><input type="radio" name="q6" value="D"> D. Fructose</label>
+        </li>
 
-  <!-- Quiz Logic -->
+        <li>
+          <p>What is a major structural polysaccharide in plant cell walls?</p>
+          <label><input type="radio" name="q7" value="A"> A. Glycogen</label><br>
+          <label><input type="radio" name="q7" value="B"> B. Cellulose</label><br>
+          <label><input type="radio" name="q7" value="C"> C. Chitin</label><br>
+          <label><input type="radio" name="q7" value="D"> D. Starch</label>
+        </li>
+
+        <li>
+          <p>Which part of a nucleotide connects to form the phosphodiester bond in nucleic acids?</p>
+          <label><input type="radio" name="q8" value="A"> A. Nitrogenous base and phosphate</label><br>
+          <label><input type="radio" name="q8" value="B"> B. Phosphate and hydroxyl group</label><br>
+          <label><input type="radio" name="q8" value="C"> C. Sugar and nitrogenous base</label><br>
+          <label><input type="radio" name="q8" value="D"> D. Sugar and R group</label>
+        </li>
+
+        <li>
+          <p>Why are nonpolar R groups buried inside a protein's 3D structure in water?</p>
+          <label><input type="radio" name="q9" value="A"> A. They form covalent bonds with other R groups</label><br>
+          <label><input type="radio" name="q9" value="B"> B. They attract water molecules</label><br>
+          <label><input type="radio" name="q9" value="C"> C. They are hydrophobic and avoid water</label><br>
+          <label><input type="radio" name="q9" value="D"> D. They form hydrogen bonds with water</label>
+        </li>
+
+        <li>
+          <p>Which property of water allows organisms to maintain a stable internal temperature?</p>
+          <label><input type="radio" name="q10" value="A"> A. Cohesion</label><br>
+          <label><input type="radio" name="q10" value="B"> B. High specific heat</label><br>
+          <label><input type="radio" name="q10" value="C"> C. Surface tension</label><br>
+          <label><input type="radio" name="q10" value="D"> D. Adhesion</label>
+        </li>
+      </ol>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <div id="result" style="margin-top: 2rem;"></div>
+  </main>
+
   <script>
     const correctAnswers = {
-      q1: 'C',
-      q2: 'B',
-      q3: 'A',
-      q4: 'C',
-      q5: 'B',
-      q6: 'B',
-      q7: 'B',
-      q8: 'B',
-      q9: 'C',
-      q10: 'B'
+      q1: "C",
+      q2: "B",
+      q3: "A",
+      q4: "C",
+      q5: "B",
+      q6: "B",
+      q7: "B",
+      q8: "B",
+      q9: "C",
+      q10: "B"
     };
 
-    function submitQuiz() {
-      const form = document.getElementById('quizForm');
+    document.getElementById("quiz-form").addEventListener("submit", function (e) {
+      e.preventDefault();
       let score = 0;
-      let wrongAnswers = [];
 
       for (let q in correctAnswers) {
-        const selected = form[q]?.value;
-        if (selected === correctAnswers[q]) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === correctAnswers[q]) {
           score++;
-        } else {
-          wrongAnswers.push(`Question ${q.slice(1)}: Correct answer is <b>${correctAnswers[q]}</b>`);
         }
       }
 
-      const resultDiv = document.getElementById('result');
-      resultDiv.innerHTML = `
-        You scored ${score}/10.<br><br>
-        ${wrongAnswers.length > 0 ? 'Review your mistakes:<br>' + wrongAnswers.join('<br>') : 'Perfect score! 🎉'}
-      `;
-    }
+      const resultBox = document.getElementById("result");
+      resultBox.innerHTML = `<h2>You got ${score} out of 10 correct!</h2>`;
+    });
   </script>
 </body>
 </html>
