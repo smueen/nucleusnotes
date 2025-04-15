@@ -11,6 +11,15 @@ body {
   color: #333;
 }
 
+.header-container {
+  background-color: #e0f3ff;
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+
 /* Global header styles */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
