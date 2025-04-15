@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Unit 1 Quiz</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #e0f2ff;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      color: #6b21a8;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      text-align: left;
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    ol {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 1.5rem;
+    }
+
+    .btn, .back-home {
+      display: inline-block;
+      background-color: #9333ea;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .btn:hover, .back-home:hover {
+      background-color: #7e22ce;
+    }
+
+    #result {
+      margin-top: 2rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #4b5563;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -22,7 +82,6 @@
           <label><input type="radio" name="q1" value="C"> C. Monosaccharide</label><br>
           <label><input type="radio" name="q1" value="D"> D. Fatty acid</label>
         </li>
-
         <li>
           <p>Which element is found in proteins but not in carbohydrates?</p>
           <label><input type="radio" name="q2" value="A"> A. Oxygen</label><br>
@@ -30,7 +89,6 @@
           <label><input type="radio" name="q2" value="C"> C. Hydrogen</label><br>
           <label><input type="radio" name="q2" value="D"> D. Carbon</label>
         </li>
-
         <li>
           <p>Which macromolecule contains phosphorus in its structure?</p>
           <label><input type="radio" name="q3" value="A"> A. Nucleic acids</label><br>
@@ -38,7 +96,6 @@
           <label><input type="radio" name="q3" value="C"> C. Carbohydrates</label><br>
           <label><input type="radio" name="q3" value="D"> D. Steroids</label>
         </li>
-
         <li>
           <p>What type of bond forms between amino acids in a protein?</p>
           <label><input type="radio" name="q4" value="A"> A. Glycosidic</label><br>
@@ -46,7 +103,6 @@
           <label><input type="radio" name="q4" value="C"> C. Peptide</label><br>
           <label><input type="radio" name="q4" value="D"> D. Phosphodiester</label>
         </li>
-
         <li>
           <p>Which nitrogen bases are purines?</p>
           <label><input type="radio" name="q5" value="A"> A. Cytosine and Uracil</label><br>
@@ -54,7 +110,6 @@
           <label><input type="radio" name="q5" value="C"> C. Thymine and Cytosine</label><br>
           <label><input type="radio" name="q5" value="D"> D. Uracil and Thymine</label>
         </li>
-
         <li>
           <p>Which of the following is a disaccharide?</p>
           <label><input type="radio" name="q6" value="A"> A. Glucose</label><br>
@@ -62,7 +117,6 @@
           <label><input type="radio" name="q6" value="C"> C. Galactose</label><br>
           <label><input type="radio" name="q6" value="D"> D. Fructose</label>
         </li>
-
         <li>
           <p>What is a major structural polysaccharide in plant cell walls?</p>
           <label><input type="radio" name="q7" value="A"> A. Glycogen</label><br>
@@ -70,7 +124,6 @@
           <label><input type="radio" name="q7" value="C"> C. Chitin</label><br>
           <label><input type="radio" name="q7" value="D"> D. Starch</label>
         </li>
-
         <li>
           <p>Which part of a nucleotide connects to form the phosphodiester bond in nucleic acids?</p>
           <label><input type="radio" name="q8" value="A"> A. Nitrogenous base and phosphate</label><br>
@@ -78,7 +131,6 @@
           <label><input type="radio" name="q8" value="C"> C. Sugar and nitrogenous base</label><br>
           <label><input type="radio" name="q8" value="D"> D. Sugar and R group</label>
         </li>
-
         <li>
           <p>Why are nonpolar R groups buried inside a protein's 3D structure in water?</p>
           <label><input type="radio" name="q9" value="A"> A. They form covalent bonds with other R groups</label><br>
@@ -86,7 +138,6 @@
           <label><input type="radio" name="q9" value="C"> C. They are hydrophobic and avoid water</label><br>
           <label><input type="radio" name="q9" value="D"> D. They form hydrogen bonds with water</label>
         </li>
-
         <li>
           <p>Which property of water allows organisms to maintain a stable internal temperature?</p>
           <label><input type="radio" name="q10" value="A"> A. Cohesion</label><br>
@@ -95,11 +146,11 @@
           <label><input type="radio" name="q10" value="D"> D. Adhesion</label>
         </li>
       </ol>
-
       <button type="submit" class="btn">Submit</button>
     </form>
 
-    <div id="result" style="margin-top: 2rem;"></div>
+    <div id="result"></div>
+    <a href="index.html" class="back-home">← Back to Home</a>
   </main>
 
   <script>
