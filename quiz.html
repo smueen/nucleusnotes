@@ -65,6 +65,22 @@
       text-transform: uppercase;
       color: #4b5563;
     }
+
+    .correct {
+      color: green;
+      font-weight: bold;
+    }
+
+    .incorrect {
+      color: red;
+      font-weight: bold;
+    }
+
+    .correct-answer {
+      color: #111827;
+      font-style: italic;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
@@ -170,16 +186,31 @@
     document.getElementById("quiz-form").addEventListener("submit", function (e) {
       e.preventDefault();
       let score = 0;
+      const resultBox = document.getElementById("result");
+      resultBox.innerHTML = "";
 
-      for (let q in correctAnswers) {
-        const selected = document.querySelector(`input[name="${q}"]:checked`);
-        if (selected && selected.value === correctAnswers[q]) {
-          score++;
+      for (let i = 1; i <= 10; i++) {
+        const qName = "q" + i;
+        const selected = document.querySelector(`input[name="${qName}"]:checked`);
+        const listItem = document.querySelector(`input[name="${qName}"]`).closest("li");
+
+        const feedback = document.createElement("div");
+
+        if (selected) {
+          if (selected.value === correctAnswers[qName]) {
+            score++;
+            feedback.innerHTML = `<span class="correct">✓ Question ${i} correct</span>`;
+          } else {
+            feedback.innerHTML = `<span class="incorrect">✗ Question ${i} incorrect.</span> <span class="correct-answer">Correct answer: ${correctAnswers[qName]}</span>`;
+          }
+        } else {
+          feedback.innerHTML = `<span class="incorrect">✗ Question ${i} not answered.</span> <span class="correct-answer">Correct answer: ${correctAnswers[qName]}</span>`;
         }
+
+        resultBox.appendChild(feedback);
       }
 
-      const resultBox = document.getElementById("result");
-      resultBox.innerHTML = `<h2>You got ${score} out of 10 correct!</h2>`;
+      resultBox.insertAdjacentHTML("afterbegin", `<h2>You got ${score} out of 10 correct!</h2><br>`);
     });
   </script>
 </body>
