@@ -9,12 +9,13 @@
     body {
       font-family: 'Open Sans', sans-serif;
       padding: 40px;
-      background-color: #f4f1fa;
+      background-color: #6a0dad; /* changed to purple */
       text-align: center;
+      color: #c0f0ff; /* light blue text */
     }
     h1 {
       font-family: 'Poppins', sans-serif;
-      color: #6a0dad;
+      color: #c0f0ff; /* light blue */
       font-size: 38px;
       font-weight: 700;
       margin-bottom: 40px;
@@ -22,7 +23,7 @@
     }
     h2 {
       font-family: 'Poppins', sans-serif;
-      color: #4b007d;
+      color: #c0f0ff; /* light blue */
       font-size: 26px;
       font-weight: 700;
       margin-top: 50px;
@@ -30,12 +31,12 @@
       text-transform: uppercase;
     }
     .header-container {
-  background-color: #e0f3ff;
-  padding: 20px;
-  border-radius: 15px;
-  display: inline-block;
-  margin-bottom: 40px;
-}
+      background-color: #6a0dad; /* match background */
+      padding: 20px;
+      width: 100vw; /* full screen width */
+      border-radius: 0;
+      margin: 0 auto 40px auto;
+    }
 
     .button {
       display: inline-block;
@@ -48,20 +49,18 @@
       border-radius: 10px;
       transition: background-color 0.3s ease;
     }
-    .button:hover {
-  background-color: #8939d4;
-  box-shadow: 0 0 15px #c084fc;
-}
 
+    .button:hover {
+      background-color: #8939d4;
+      box-shadow: 0 0 15px #c084fc;
     }
   </style>
 </head>
 <body>
   
-    <div class="header-container">
+  <div class="header-container">
     <h1>🧬 NUCLEUS NOTES</h1>
   </div>
-
 
   <h2>UNIT 1: CHEMISTRY OF LIFE</h2>
   <a href="unit1-notes.pdf" class="button" target="_blank">📄 View PDF Notes</a>
